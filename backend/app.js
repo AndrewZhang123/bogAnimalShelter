@@ -1,12 +1,21 @@
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+const express = require('express')
+const cookieParser = require('cookie-parser')
+const logger = require('morgan')
+const mongoose = require('mongoose')
+const routes = require('./routes')
+
+require('dotenv').config()
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
+
+mongoose.connect(process.env.MONGODB_URI. {
+    useNewUrlParser: true,
+})
+.then(_ => console.log('Successfully Connected to MongoDB'))
+.catch(err => console.log('Error connecting to MongoDB', err))
 
 app.use(logger('dev'));
 app.use(express.json());
