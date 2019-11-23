@@ -22,7 +22,7 @@ const petSchema = mongoose.Schema(
             required: true,
         },
         yearsOld: {
-            type: Number,
+            type: String,
             required: true,
             default: "unknown"
         },
@@ -31,7 +31,7 @@ const petSchema = mongoose.Schema(
             required: true,
             default: false
         },
-        species: {
+        animalType: {
             type: String,
             required: true
         }
