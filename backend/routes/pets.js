@@ -50,6 +50,7 @@ router.get("/byAnimalTypes", (req, res, next) => {
     })
 })
 
+/* DELETE Pets with specific id */
 router.delete("/", (req, res, next) => {
     Pet.findByIdAndDelete(req.query.id)
     .then(deletedItem => {
@@ -57,6 +58,17 @@ router.delete("/", (req, res, next) => {
     })
     .catch(err => {
         console.log(err)
+    })
+})
+
+/* GET info abt pet when passed in the name and animalType" */
+router.get("/:name/:animalType", (req, res) => {
+    Pet.find({name: req.params.name, animalType: req.params.animalType})
+    .then(pet => {
+        res.status(200).json(pet)
+    })
+    .catch(err => {
+        res.status(400).json(err)
     })
 })
 
