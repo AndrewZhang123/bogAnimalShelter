@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import Dogs from './profile';
 import Profile from './profile';
+import About from './about';
 
 
 function App() {
@@ -39,7 +40,8 @@ function App() {
   }]);
 
   return (
-    <div className="page">
+    <div>
+      <div className="page">
       <div className='title'>
         <h1>Dogs</h1>
       </div>
@@ -56,6 +58,10 @@ function App() {
         {cats.map(cat => (
           <Profile image={cat.image} name={cat.name} details={cat.details} />
         ))}
+      </div>
+      </div>
+      <div className="about">
+        <About/>
       </div>
     </div>
   );
