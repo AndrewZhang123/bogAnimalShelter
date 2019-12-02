@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import Dogs from './profile';
 import Profile from './profile';
+import Nav from './nav';
 
 
 function App() {
@@ -39,23 +40,28 @@ function App() {
   }]);
 
   return (
-    <div className="page">
-      <div className='title'>
-        <h1>Dogs</h1>
+    <div>
+      <div className="nav">
+        <Nav />
       </div>
-      <div className="app">
-        {dogs.map(dog => (
-          < Profile image={dog.image} name={dog.name} details={dog.details} />
-        ))}
-      </div>
-      <div className='title'>
-        <h1>Cats</h1>
-      </div>
+      <div className="page">
+        <div className='title'>
+          <h1>Dogs</h1>
+        </div>
+        <div className="app">
+          {dogs.map(dog => (
+            < Profile image={dog.image} name={dog.name} details={dog.details} />
+          ))}
+        </div>
+        <div className='title'>
+          <h1>Cats</h1>
+        </div>
 
-      <div className="app">
-        {cats.map(cat => (
-          <Profile image={cat.image} name={cat.name} details={cat.details} />
-        ))}
+        <div className="app">
+          {cats.map(cat => (
+            <Profile image={cat.image} name={cat.name} details={cat.details} />
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -4,6 +4,35 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
+.nav {
+  color: aliceblue;
+
+  width: 100%;
+  background-color: rgb(0, 119, 255);
+  padding: 1% 5% 1% 5%;
+  display: flex;
+  justify-content: space-between;
+}
+.nav h1 {
+  font-size: 25px;
+}
+.nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  align-content: center;
+  width: 200px;
+}
+.nav li {
+  font-size: 17px;
+  margin: auto;
+  padding: 1% 1% 1% 10%;
+  display: inline;
+}
+.nav .adopt {
+  font-weight: 700;
+}
+
 .title {
   display: block;
   margin: 5% 0px 0px 10%;
