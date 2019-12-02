@@ -3,6 +3,7 @@ import './App.css';
 import Dogs from './profile';
 import Profile from './profile';
 import Nav from './nav';
+import About from './about';
 
 
 function App() {
@@ -63,7 +64,11 @@ function App() {
           ))}
         </div>
       </div>
-    </div>
+      <div>
+        <About />
+      </div>
+    </div >
+
   );
 }
 
