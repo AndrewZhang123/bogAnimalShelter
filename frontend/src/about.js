@@ -5,7 +5,7 @@ import './App.css';
 function About(props) {
     return (
         <div className='about'>
-            {/* <img src={props.image} alt="dog" /> */}
+            <img src="https://picsum.photos/1425/300" />
             <h2>Our Mission</h2>
             <p>Our mission is to advocate for animals by providing safety until home placement of those in
                 our care. We promote spay and neuter programs as a means to control pet overpopluation.

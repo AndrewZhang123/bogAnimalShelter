@@ -60,7 +60,7 @@ function App() {
         ))}
       </div>
       </div>
-      <div className="about">
+      <div>
         <About/>
       </div>
     </div>
