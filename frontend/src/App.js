@@ -42,7 +42,7 @@ function App() {
 
   return (
     <div>
-      <div className="nav">
+      <div>
         <Nav />
       </div>
       <div className="page">
@@ -69,7 +69,7 @@ function App() {
       </div>
     </div >
 
-  );
-}
+  )
+};
 
 export default App;

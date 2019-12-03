@@ -11,7 +11,7 @@ function Nav() {
         <li className='adopt'>Adopt a pet!</li>
       </ul>
     </div>
-  );
+  )
 };
 
 export default Nav;
