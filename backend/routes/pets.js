@@ -39,10 +39,9 @@ router.get("/byAnimalTypes", (req, res, next) => {
                 }
             }
         } 
-    }
-    ]).then(petList => {
+    }])
+    .then(petList => {
         console.log({petList})
-        console.log("_________")
         res.status(200).json(petList)
     })
     .catch(err => {
@@ -52,23 +51,37 @@ router.get("/byAnimalTypes", (req, res, next) => {
 
 /* DELETE Pets with specific id */
 router.delete("/", (req, res, next) => {
+    console.log(req.query.id)
     Pet.findByIdAndDelete(req.query.id)
     .then(deletedItem => {
         res.status(200).json(deletedItem)
     })
     .catch(err => {
+        console.log(Hi)
         console.log(err)
     })
 })
 
 /* GET info abt pet when passed in the name and animalType" */
 router.get("/:name/:animalType", (req, res) => {
-    Pet.find({name: req.params.name, animalType: req.params.animalType})
+    Pet.find({
+            name: req.params.name, 
+            animalType: req.params.animalType
+        })
     .then(pet => {
         res.status(200).json(pet)
     })
     .catch(err => {
         res.status(400).json(err)
+    })
+})
+
+router.patch("/:name/:animalType", (req, res, next) => {
+    Pet.findOneAndUpdate({
+        name: req.params.name, 
+        animalType: req.params.animalType 
+    }).then(pet => {
+        res.status(202).json(pet)
     })
 })
 
