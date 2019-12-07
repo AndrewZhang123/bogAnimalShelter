@@ -1,9 +1,14 @@
+/* .page {
+  display: grid;
+  grid-template-columns: 5% 1fr 5%;
+} */
 .app {
   margin: 2%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
+
 .nav {
   color: aliceblue;
 
@@ -14,10 +19,12 @@
   grid-template-columns: 5% 1fr 1fr 5%;
   justify-content: space-between;
 }
+
 .nav h1 {
   font-size: 25px;
   grid-column: 2/3;
 }
+
 .nav ul {
   grid-column: 3/4;
   margin: auto;
@@ -25,12 +32,14 @@
   list-style: none;
   width: 200px;
 }
+
 .nav li {
   font-size: 17px;
   margin: auto;
   padding: 1% 1% 1% 10%;
   display: inline;
 }
+
 .nav .adopt {
   padding-right: 0%;
   font-weight: 700;
@@ -58,16 +67,20 @@
   height: 250px;
   border-radius: 10px;
 }
+
 .profile .details {
   display: flex;
   align-content: center;
 }
+
 .profile .details {
   align-content: center;
 }
-.profile .details .emojis #female {
+
+.profile .details .emojis #gender {
   padding-left: 20px;
 }
+
 .profile li,
 h2 {
   list-style: none;
@@ -89,6 +102,7 @@ h2 {
 .about {
   margin: 3%;
 }
+
 .about h2 {
   margin: 2% 0% 1% 0%;
   text-align: center;
@@ -107,12 +121,15 @@ h2 {
 }
 
 .about .image {
+  width: 100vw;
   object-fit: cover;
   height: 400px;
 }
+
 .about img {
-  width: fit-content;
+  width: 100vw;
 }
+
 .about div {
   border-radius: 10px;
 }
@@ -127,6 +144,7 @@ h2 {
   box-shadow: 0 13px 27px -5px hsla(240, 30.1%, 28%, 0.25),
     0 8px 16px -8px hsla(0, 0%, 0%, 0.3), 0 -6px 16px -6px hsla(0, 0%, 0%, 0.03);
 }
+
 .hours div ul {
   display: flex;
   flex-direction: column;

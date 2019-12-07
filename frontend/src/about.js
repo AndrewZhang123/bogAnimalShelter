@@ -6,7 +6,7 @@ function About() {
     return (
         <div>
             <div className='image'>
-                <img src="https://picsum.photos/1519/400?blur" />
+                <img src="./assets/cats-dogs-bg.jpg" />
             </div>
             <div className='about'>
 
